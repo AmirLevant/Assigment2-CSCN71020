@@ -70,19 +70,19 @@ int getIntInput(char message[]) {
 	return input;
 }
 
-void setLength(int input, int *length) {
-	if (input >= 0 && input < 100) {
+void setLength(int input, int *length) { // change 1 line 74: fixed the to only be inclusive from 1 to 99
+	if (input > 0 && input < 100) {
 		*length = input;
 	}
 }
 
-void setWidth(int input, int *width) {
-	if (input > 0 && input <= 100) {
+void setWidth(int input, int *width) { // change 1 line 80: fixed the to only be inclusive from 1 to 99
+	if (input > 0 && input < 100) {
 		*width = input;
 	}
 }
 
-int getPerimeter(int *length, int *width){ //change1: added a missing width to the calculation 
+int getPerimeter(int *length, int *width){ //change1 line 86: added a missing width to the calculation 
 	int perimeter = *length + *length + *width + *width;
 	return perimeter;
 }
